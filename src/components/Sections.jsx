@@ -20,7 +20,7 @@ function Section({ id, children, bg = 'bg-white', className = '' }) {
   const ref = useReveal()
   return (
     <section id={id} className={`${bg} border-b border-slate-100 ${className}`}>
-      <div ref={ref} className="fade-in w-full max-w-[1400px] mx-auto px-3 py-10">{children}</div>
+      <div ref={ref} className="fade-in w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-3 py-10">{children}</div>
     </section>
   )
 }
@@ -101,12 +101,26 @@ const badgeStyles = {
   research: 'bg-cyan-50 text-cyan-700 border border-cyan-200',
 }
 
+function useVisibleCount() {
+  const [visible, setVisible] = useState(
+    typeof window === 'undefined' ? 3 : window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3
+  )
+  useEffect(() => {
+    const onResize = () => {
+      setVisible(window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3)
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+  return visible
+}
+
 export function ProjectsSection() {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(null) // 'left' | 'right'
   const [animating, setAnimating] = useState(false)
   const total = projects.length
-  const VISIBLE = 3
+  const VISIBLE = useVisibleCount()
 
   const navigate = (dir) => {
     if (animating) return
@@ -155,7 +169,7 @@ export function ProjectsSection() {
 
         {/* Cards container */}
         <div className="flex-1 overflow-hidden">
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 ${slideClass}`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ${slideClass}`}>
             {visibleProjects.map((p, i) => (
               <div
                 key={`${p.name}-${current}-${i}`}
@@ -416,7 +430,7 @@ export function ContactSection() {
 
         {/* Right — Form */}
         <form onSubmit={handleSubmit} className="p-8 flex flex-col gap-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <input name="name" value={form.name} onChange={handleChange} placeholder="Your name *" className="px-3 py-2.5 text-sm border border-slate-200 rounded-lg bg-white outline-none focus:border-cyan-400 transition-colors" />
             <input name="email" value={form.email} onChange={handleChange} placeholder="Your email *" className="px-3 py-2.5 text-sm border border-slate-200 rounded-lg bg-white outline-none focus:border-cyan-400 transition-colors" />
           </div>

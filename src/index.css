@@ -10,12 +10,21 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light only;
 }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background: #f1f5f9;
   color: #0f172a;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Prevent any element from forcing horizontal scroll on small screens */
+#root {
+  width: 100%;
   overflow-x: hidden;
 }
 
