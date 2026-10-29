@@ -71,10 +71,10 @@ export default function Hero() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-cyan-50 to-transparent rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-green-50 to-transparent rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-3 pb-10">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-3 pb-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
           {/* Left */}
-          <div className="flex-1 w-full">
+          <div className="flex-1">
             {/* Available badge */}
             {/* <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full mb-5">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
@@ -82,7 +82,7 @@ export default function Hero() {
             </div> */}
 
             <p className="text-slate-400 text-sm font-medium mb-1">Hey there! I'm</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight mb-3">
+            <h1 className="text-5xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight mb-3">
               Barath <span className="text-cyan-600">R</span>
             </h1>
 
@@ -94,7 +94,7 @@ export default function Hero() {
             </div>
 
             <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-lg">
-              A curious, problem-solving, creation-driven developer with 2.5+ years building
+              A curious, problem-solving, creation-driven developer with 2.8+ years building
               production-grade systems at <span className="text-cyan-600 font-semibold">AU-KBC Research Centre, Anna University</span>.
               I don't just write code — I build things that matter.
             </p>
@@ -126,22 +126,19 @@ export default function Hero() {
           </div>
 
           {/* Right — Avatar */}
-          <div
-            className="relative flex-shrink-0 mx-auto lg:mx-0 lg:mr-10 xl:mr-20 mt-4 lg:mt-0"
-            style={{ animation: 'float 3s ease-in-out infinite' }}
-          >
+          <div className="relative flex-shrink-0 animate-[float_3s_ease-in-out_infinite] mr-60" style={{ animation: 'float 3s ease-in-out infinite' }}>
             <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}`}</style>
             {/* Top card */}
-            <div className="absolute -top-4 -left-4 sm:-left-10 bg-white border border-slate-200 rounded-xl shadow-md px-3 py-2 z-10">
+            <div className="absolute -top-4 -left-10 bg-white border border-slate-200 rounded-xl shadow-md px-3 py-2 z-10">
               <div className="text-xs text-slate-400">Experience</div>
-              <div className="text-sm font-bold text-cyan-600">2.5+ Years</div>
+              <div className="text-sm font-bold text-cyan-600">2.8+ Years</div>
             </div>
             {/* Avatar */}
-            <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-3xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center text-4xl sm:text-5xl font-black text-white shadow-2xl shadow-cyan-200">
+            <div className="w-36 h-36 rounded-3xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center text-5xl font-black text-white shadow-2xl shadow-cyan-200">
               BR
             </div>
             {/* Bottom card */}
-            <div className="absolute -bottom-4 -right-4 sm:-right-10 bg-white border border-slate-200 rounded-xl shadow-md px-3 py-2 z-10">
+            <div className="absolute -bottom-4 -right-10 bg-white border border-slate-200 rounded-xl shadow-md px-3 py-2 z-10">
               <div className="text-xs text-slate-400">Multi Domain</div>
               <div className="text-sm font-bold text-emerald-600">Developer</div>
             </div>
