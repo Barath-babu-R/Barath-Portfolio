@@ -2,7 +2,7 @@ export const personal = {
   name: "Barath R",
   title: "Software Developer",
   tagline: "Full-Stack · AI/NLP Research · Native Android",
-  description: "A curious, problem-solving, creation-driven developer with 2.5+ years building production-grade systems at AU-KBC Research Centre, Anna University. I don't just write code — I build things that matter.",
+  description: "A curious, problem-solving, creation-driven developer with 2.8+ years building production-grade systems at AU-KBC Research Centre, Anna University. I don't just write code — I build things that matter.",
   email: "barathbabu659@gmail.com",
   phone: "+91 88388 08641",
   location: "Chennai, India · Open to Pan India + Remote",
@@ -12,7 +12,7 @@ export const personal = {
 }
 
 export const stats = [
-  { num: "2.5+", label: "Years Experience" },
+  { num: "2.8+", label: "Years Experience" },
   { num: "100+", label: "Researchers Served" },
   { num: "6+", label: "Projects Delivered" },
   { num: "1", label: "Live Play Store App" },
@@ -63,7 +63,7 @@ export const story = [
 
 export const experience = [
   {
-    date: "February 2024 — Present · 2.5+ years",
+    date: "February 2024 — Present · 2.8+ years",
     title: "Software Developer",
     company: "AU-KBC Research Centre, Anna University — Chennai, India",
     desc: "Working at one of India's leading NLP research centres delivering across full-stack development, AI/NLP systems, and Android apps. Led the Discourse Platform — a large-scale on-premise NLP research system used by 100+ researchers. Built multilingual annotation tools, NLP chatbots with Anaphora Resolution, and deployed a production app on the Play Store.",
